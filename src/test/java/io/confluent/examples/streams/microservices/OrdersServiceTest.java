@@ -45,9 +45,11 @@ public class OrdersServiceTest extends MicroserviceTestUtils {
   public void shutdown() {
     if (rest != null) {
       rest.stop();
+      rest.cleanLocalState();
     }
     if (rest2 != null) {
       rest2.stop();
+      rest2.cleanLocalState();
     }
   }
 
